@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mydoggie.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR + '/mydoggie/static/template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

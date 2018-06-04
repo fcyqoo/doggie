@@ -18,9 +18,17 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url, include
 from django.contrib import admin
+from .top_view import index_view, version_view, silian
 
 urlpatterns = [
+    # common
     url('admin/', admin.site.urls),
+    url(r'^$', index_view),
+    url(r'^admin/', admin.site.urls),
+    url(r'^version/', version_view),
+    url(r'^silian_doggiedoc.xml', silian),
+
+    # function
     url('wiki/', include("dogwiki.urls")),
 
 ]
