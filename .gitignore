@@ -112,3 +112,4 @@ mydoggie/env_tools/*
 
 # test
 .mydoggie/test/*
+.mydoggie/mydoggie/settings_prod.py
