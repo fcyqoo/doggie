@@ -111,5 +111,7 @@ venv.bak/
 mydoggie/env_tools/*
 
 # test
-.mydoggie/test/*
-.mydoggie/mydoggie/settings_prod.py
+mydoggie/test/*
+mydoggie/mydoggie/settings_prod.py
+.DS_Store
+test\\DefaultConnectionSettings.reg
