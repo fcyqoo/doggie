@@ -54,6 +54,7 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
+settings_prod.py
 db.sqlite3
 
 # Flask stuff:
@@ -107,5 +108,7 @@ venv.bak/
 .idea/
 
 # myconf
-.mydoggie/env_tools/*
-.mydoggie/settings_prod.py
+mydoggie/env_tools/*
+
+# test
+.mydoggie/test/*
