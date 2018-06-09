@@ -20,6 +20,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from .top_view import index_view, version_view, silian
 
+from django.conf import settings_prod as settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     # common
     url('admin/', admin.site.urls),
@@ -31,4 +34,4 @@ urlpatterns = [
     # function
     url('wiki/', include("dogwiki.urls")),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
