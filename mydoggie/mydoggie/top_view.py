@@ -12,6 +12,8 @@ def version_view(request):
 
 @csrf_exempt
 def index_view(request):
+    from mydoggie import settings_prod
+    print(">>>>:", settings_prod.BASE_DIR, settings_prod.STATIC_ROOT)
     template_name = 'index.html'
 
     return render_to_response(template_name, dict())

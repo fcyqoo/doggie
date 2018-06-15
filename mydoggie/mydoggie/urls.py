@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.contrib import admin
 from .top_view import index_view, version_view, silian
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     # common
@@ -32,3 +34,12 @@ urlpatterns = [
     url('wiki/', include("dogwiki.urls")),
 
 ]
+
+from django.views.static import serve
+from django.conf import settings
+
+if not settings.DEBUG:
+    urlpatterns += [url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT})]
+
+
+
